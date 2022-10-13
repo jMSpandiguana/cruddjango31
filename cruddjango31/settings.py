@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-ba10*$#%0*cr#grd$i%-%d(djf4+32$083tabt%%ra7mrslm&n
 
 ALLOWED_HOSTS = [
 
-    'www.pruebajose.com',
-    '35.236.34.100',
+    'pruebajose.com',
 ]
 
 
