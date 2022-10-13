@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ba10*$#%0*cr#grd$i%-%d(djf4+32$083tabt%%ra7mrslm&n
 
 ALLOWED_HOSTS = [
 
-    "https://localhost:3001"
+    "prueba1.great-site.net"
 ]
 
 
