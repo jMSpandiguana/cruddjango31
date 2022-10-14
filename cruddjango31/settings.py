@@ -85,7 +85,7 @@ DATABASES = {
     'NAME': 'cruddjango31',
     'USER': 'postgres',
     'PASSWORD': 'cuenca',
-    'HOST': 'postgresql-s653-z9ag-production',
+    'HOST': 'postgresql-qzfq-i53p-production',
     'PORT': '5432',
     #postgres://postgres:cuenca@postgresql-wdvo-ywsj-production:5432/cruddjango31?sslmode=disable
     }
