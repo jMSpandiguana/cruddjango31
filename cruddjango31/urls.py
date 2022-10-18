@@ -20,7 +20,7 @@ from postres.views import PostresListado, PostreDetalle, PostreCrear, PostreActu
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls)+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT,
+    path('admin/', admin.site.urls)T,
 
 
     path('', PostresListado.as_view(template_name ="postres/index.html"), name='leer' ),
