@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,10 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ba10*$#%0*cr#grd$i%-%d(djf4+32$083tabt%%ra7mrslm&n'
-
+#SECRET_KEY = 'django-insecure-ba10*$#%0*cr#grd$i%-%d(djf4+32$083tabt%%ra7mrslm&n'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-ba10*$#%0*cr#grd$i%-%d(djf4+32$083tabt%%ra7mrslm&n')
 # SECURITY WARNING: don't run with debug turned on in production!
 
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = [
 
@@ -85,7 +87,7 @@ DATABASES = {
     'NAME': 'cruddjango31',
     'USER': 'postgres',
     'PASSWORD': 'cuenca',
-    'HOST': 'postgresql-qzfq-i53p-production',
+    'HOST': 'localhost',
     'PORT': '5432',
     #postgres://postgres:cuenca@postgresql-wdvo-ywsj-production:5432/cruddjango31?sslmode=disable
     }

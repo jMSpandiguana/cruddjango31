@@ -23,14 +23,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
 
-    path('postres/', PostresListado.as_view(template_name ="postres/index.html"), name='leer' ),
+    path('', PostresListado.as_view(template_name ="postres/index.html"), name='leer' ),
 
-    path('postres/detalle/<int:pk>', PostreDetalle.as_view(template_name="postres/detalles.html"), name='detalles'),
+    path('detalle/<int:pk>', PostreDetalle.as_view(template_name="postres/detalles.html"), name='detalles'),
 
-    path('postres/crear', PostreCrear.as_view(template_name = "postres/crear.html"),name ='crear'),
+    path('crear', PostreCrear.as_view(template_name = "postres/crear.html"),name ='crear'),
 
-    path('postres/editar/<int:pk>', PostreActualizar.as_view(template_name ="postres/actualizar.html"), name ='actualizar'),
+    path('editar/<int:pk>', PostreActualizar.as_view(template_name ="postres/actualizar.html"), name ='actualizar'),
 
-    path('postres/eliminar/<int:pk>', PostreEliminar.as_view(),name ='eliminar'),
+    path('eliminar/<int:pk>', PostreEliminar.as_view(),name ='eliminar'),
 
 ]
