@@ -146,7 +146,7 @@ STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'static/')
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL ='/postres/'
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'postres/static/uploads')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'postres/static/uploads')
 MEDIA_ROOT = os.path.join(REPOSITORY_ROOT, 'postres/')
 
 
