@@ -14,9 +14,9 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-#BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-REPOSITORY_ROOT = os.path.dirname(BASE_DIR)
+BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+#REPOSITORY_ROOT = os.path.dirname(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -141,13 +141,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'static/')
+#STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'static/')
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL ='/postres/'
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'postres/static/uploads')
-MEDIA_ROOT = os.path.join(REPOSITORY_ROOT, 'postres/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'postres/static/uploads')
+#MEDIA_ROOT = os.path.join(REPOSITORY_ROOT, 'postres/')
 
 
 
