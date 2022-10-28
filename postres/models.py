@@ -13,3 +13,6 @@ class Postres(models.Model):
 
     class Meta:
         db_table = 'postres'
+
+    def __str__(self):
+        return self.nombre

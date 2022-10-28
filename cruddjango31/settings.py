@@ -26,10 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-ba10*$#%0*cr#grd$i%-%d(djf4+32$083tabt%%ra7mrslm&')
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = os.environ.get('DJANGO_DEBUG', default=False) 
+#DEBUG = os.environ.get('DJANGO_DEBUG', default=False) 
+DEBUG = os.environ.get('DJANGO_DEBUG','') != 'False' 
 #DEBUG= False
 ALLOWED_HOSTS = [
-'obscure-eyrie-88109.herokuapp.com',
+'*',
     '127.0.0.1',
 ]
 
@@ -145,8 +146,8 @@ STATIC_URL = '/static/'
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-MEDIA_URL ='/postres/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'postres/static/uploads')
+MEDIA_URL ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/static/uploads')
 #MEDIA_ROOT = os.path.join(REPOSITORY_ROOT, 'postres/')
 
 
